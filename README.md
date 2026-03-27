@@ -42,3 +42,7 @@ Or manually:
 ~~~bash
 ./build/main
 ~~~
+
+## Limitations
+
+These functions are not interrupt-safe. For use in systems with interrupts, disable IRQ before calling and re-enable after.
