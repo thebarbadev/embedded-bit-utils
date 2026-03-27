@@ -11,20 +11,20 @@
 
 void set_bit(uint32_t *reg, uint8_t bit) {
   if(bit > 31) return;
-  *reg |= (1 << bit);
+  *reg |= (1UL << bit);
 }
 
 void clear_bit(uint32_t *reg, uint8_t bit) {
   if(bit > 31) return;
-  *reg &= ~(1 << bit);
+  *reg &= ~(1UL << bit);
 }
 
 void toggle_bit(uint32_t *reg, uint8_t bit) {
   if(bit > 31) return;
-  *reg ^= (1 << bit);
+  *reg ^= (1UL << bit);
 }
 
 uint8_t read_bit(uint32_t *reg, uint8_t bit) {
   if(bit > 31) return 0;
-  return (*reg >> bit) & 1;
+  return (*reg >> bit) & 1UL;
 }
